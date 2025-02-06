@@ -15,6 +15,7 @@ fileRouter.route("/getById/:id").get(
 );
 
 fileRouter.route("/upload/xml").post(
+  verifyJWT,
   upload.single('dataFile'),
   uploadXML
 )
